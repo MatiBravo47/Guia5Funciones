@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO.IsolatedStorage;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -106,6 +107,68 @@ namespace Guia5Funciones
             MostrarInstrucciones();
             Console.ReadLine();
             */
+            /*
+             * 4. Saludo y nombre 
+             * Programa que incluya dos metodos. Uno de ellos debe aceptar un parametro, pero no debe retornar un valor.
+             * -Primer metodo: 
+             * Nombre: MostrarSaludo 
+             * Parametro: String nombre
+             * Debe imprimir un saludo personalizado
+             *- Segundo metodo:
+             * Nombre: SolicitudNombre
+             * Debe solicitar al usuario que ingrese un nombre y llamar al metodo MostrarSaludo.
+            */
+            /*
+            string nombre;
+            void MostrarSaludo(string nombreSaludo)
+            {
+                Console.WriteLine($"Hola {nombreSaludo}!"  );
+            }
+
+            void SolicitarNombre()
+            {
+                Console.WriteLine("Ingrese un nombre");
+                nombre = Console.ReadLine();
+                MostrarSaludo(nombre);
+            }
+            SolicitarNombre();
+            Console.ReadLine();
+            */
+            /*
+             * 5. Realizar 10 sumas y productos
+             * 
+            */
+            /*
+            void CalcularSuma(int a, int b, int c)
+            {
+                Console.WriteLine("La suma de los numeros es: "+ (a + b + c));
+            }
+
+            void CalcularProducto(int a, int b, int c)
+            {
+                Console.WriteLine("El producto de los numeros es: " + (a * b * c));
+            }
+
+            void SolicitarNumeros() 
+            {
+                int a, b, c;
+                Console.Write("Ingrese valor 1: ");
+                a = int.Parse(Console.ReadLine());
+                Console.Write("Ingrese valor 2: ");
+                b = int.Parse(Console.ReadLine());
+                Console.Write("Ingrese valor 3: ");
+                c = int.Parse(Console.ReadLine());
+                CalcularSuma(a, b, c);
+                CalcularProducto(a, b, c);
+            }
+            for (int i = 0; i<= 10; i++ )
+            {
+                SolicitarNumeros();
+            }
+            Console.ReadLine();
+            */
+
         }
+
     }
 }
