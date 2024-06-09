@@ -167,7 +167,89 @@ namespace Guia5Funciones
             }
             Console.ReadLine();
             */
+            /*
+             * 6.
+            */ 
+            /*
+            double CalcularAreaCirculo(double radio)
+            {
+                return Math.PI * radio * radio;
+            }
 
+            double CalcularAreaRectangulo(double largo, double ancho)
+            {
+                return largo * ancho;
+            }
+
+            void SolicitarDatosYMostrarResultados()
+            {
+                double radioIngresado, largoIngresado, anchoIngresado;
+
+                Console.Write("Ingrese el radio del circulo: ");
+                radioIngresado = double.Parse(Console.ReadLine());
+                Console.WriteLine("El area del circulo es: " + CalcularAreaCirculo(radioIngresado));
+                
+                Console.Write("Ingrese el largo del rectangulo: ");
+                largoIngresado = double.Parse(Console.ReadLine());
+                Console.Write("Ingrese el ancho del rectangulo: ");
+                anchoIngresado = double.Parse(Console.ReadLine());
+                Console.WriteLine("El area del circulo es: " + CalcularAreaRectangulo(largoIngresado, anchoIngresado));
+            }
+            char opcion = 'S'; 
+            while (opcion == 'S')
+            { 
+                SolicitarDatosYMostrarResultados();
+                Console.WriteLine("Desea realizar otro calculo?(S/N)");
+                opcion = Console.ReadKey().KeyChar;
+                Console.WriteLine();
+            }
+            Console.ReadLine();
+            */
+            /*
+             * 7.
+            */
+            /*
+            int LeerNumero()
+            {
+                Console.WriteLine("Ingrese un numero");
+                return int.Parse(Console.ReadLine());     
+            }
+
+            bool EsPar(int numero)
+            {
+                return numero % 2 == 0;
+            }
+
+            int CalcularCuadrado(int numero) 
+            {
+                return numero*numero;
+            }
+
+            int CalcularCubo(int numero) 
+            {
+                return numero*numero*numero;
+            }
+
+            void MostrarResultados() 
+            {
+                int numero;
+                numero = LeerNumero();
+                
+                if (EsPar (numero))
+                {
+                    Console.WriteLine($"El numero {numero} es par");
+                }
+                else
+                { 
+                    Console.WriteLine($"El numero {numero} es impar");
+                }
+
+                Console.WriteLine($"El cuadrado de {numero} es " + CalcularCuadrado(numero));
+                Console.WriteLine($"El cubo de {numero} es " + CalcularCubo(numero));
+            }
+            MostrarResultados();
+            Console.ReadLine();
+            */
         }
 
     }
