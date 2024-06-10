@@ -305,9 +305,6 @@ namespace Guia5Funciones
                 Console.WriteLine();
             }
             Console.ReadLine();
-
-
-
         }
 
     }
