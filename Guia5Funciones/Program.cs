@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics.CodeAnalysis;
 using System.IO.IsolatedStorage;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace Guia5Funciones
 {
@@ -20,7 +22,6 @@ namespace Guia5Funciones
              * Funcion 3: Llamar a funcion 1 y funcion 2. Mostrar 
              * bienvenida y datos del cliente.
             */
-            /*
             string nombre;
             int edad;
 
@@ -48,7 +49,6 @@ namespace Guia5Funciones
             
             ImprimirBienvenidaDatos();
             Console.ReadLine();
-            */
             /*
              * 2. Desarrolle un programa que realice lo siguiente:
              * - Pida al usuario que ingrese numeros de un digito(0-9) repetidamente
@@ -58,7 +58,6 @@ namespace Guia5Funciones
              * - El programa debe imprimir el numero originar y su cuadrado despues 
              * de cada entrada valida.
             */
-            /*
             string opcion;
             int numero; 
 
@@ -77,7 +76,6 @@ namespace Guia5Funciones
                 Console.WriteLine("Ingrese un numero de un digito (0-9) o 'N' para salir");
                 opcion = Console.ReadLine();
             }
-            */
             /*
              * 3.
              * Practica: Sin argumentos ni return en los metodos
@@ -88,7 +86,6 @@ namespace Guia5Funciones
              * - Nombre: Mostrar instrucciones
              * - Debe imprimir instrucciones lavarse las manos.
             */
-            /*
             void MostrarBienvenida()
             {
                 Console.WriteLine("Bienvenido al programa.");
@@ -106,7 +103,6 @@ namespace Guia5Funciones
             MostrarBienvenida();
             MostrarInstrucciones();
             Console.ReadLine();
-            */
             /*
              * 4. Saludo y nombre 
              * Programa que incluya dos metodos. Uno de ellos debe aceptar un parametro, pero no debe retornar un valor.
@@ -118,7 +114,6 @@ namespace Guia5Funciones
              * Nombre: SolicitudNombre
              * Debe solicitar al usuario que ingrese un nombre y llamar al metodo MostrarSaludo.
             */
-            /*
             string nombre;
             void MostrarSaludo(string nombreSaludo)
             {
@@ -133,12 +128,10 @@ namespace Guia5Funciones
             }
             SolicitarNombre();
             Console.ReadLine();
-            */
             /*
              * 5. Realizar 10 sumas y productos
              * 
             */
-            /*
             void CalcularSuma(int a, int b, int c)
             {
                 Console.WriteLine("La suma de los numeros es: "+ (a + b + c));
@@ -166,11 +159,9 @@ namespace Guia5Funciones
                 SolicitarNumeros();
             }
             Console.ReadLine();
-            */
             /*
              * 6.
-            */ 
-            /*
+            */
             double CalcularAreaCirculo(double radio)
             {
                 return Math.PI * radio * radio;
@@ -204,11 +195,9 @@ namespace Guia5Funciones
                 Console.WriteLine();
             }
             Console.ReadLine();
-            */
             /*
              * 7.
             */
-            /*
             int LeerNumero()
             {
                 Console.WriteLine("Ingrese un numero");
@@ -249,7 +238,76 @@ namespace Guia5Funciones
             }
             MostrarResultados();
             Console.ReadLine();
+            /*
+             * 8.
             */
+
+            int Sumar(int a, int b)
+            {
+                return a + b;
+            }
+
+            int Restar(int a, int b)
+            {
+                return a - b;
+            }
+
+            int Multiplicar(int a, int b)
+            {
+                return a * b;
+            }
+
+            double Dividir(int a, int b)
+            {
+                return a / b;
+            }
+            
+            int ElegirOperacion() 
+            {
+                Console.WriteLine("Seleccione una operacion");
+                Console.WriteLine("1. Suma");
+                Console.WriteLine("2. Resta");
+                Console.WriteLine("3. Multiplicacion");
+                Console.WriteLine("4. Division");
+                return int.Parse(Console.ReadLine());
+            }
+
+            int IngresarNumero() 
+            {
+                Console.WriteLine("Ingrese un numero entero");
+                return int.Parse(Console.ReadLine());
+            }
+
+            int numero1, numero2, opcion;
+            char respuesta = 'S';
+            while (respuesta == 'S')
+            {
+                numero1 = IngresarNumero();
+                numero2 = IngresarNumero();
+                opcion = ElegirOperacion();
+                switch (opcion)
+                {
+                    case 1:
+                        Console.WriteLine("El resultado de la suma es: " + Sumar(numero1, numero2));
+                        break;
+                    case 2:
+                        Console.WriteLine("El resultado de la resta es: " + Restar(numero1, numero2));
+                        break;
+                    case 3:
+                        Console.WriteLine("El resultado de la multiplicacion es: " + Multiplicar(numero1, numero2));
+                        break;
+                    case 4:
+                        Console.WriteLine("El resultado de la division es: " + Dividir(numero1, numero2));
+                        break;
+                }
+                Console.WriteLine("Desea hacer otro calculo? (S/N)");
+                respuesta = Console.ReadKey().KeyChar;
+                Console.WriteLine();
+            }
+            Console.ReadLine();
+
+
+
         }
 
     }
